@@ -7,8 +7,8 @@ const Review = () => {
     const { name:reviewName, job:reviewJob, image:reviewImage, text:reviewText } = reviews[index];
 
     const prevPerson = () => {
-        setIndex((prevValue) => { //prevValue index degeri
-            let newIndex = prevValue - 1; // prevValue degeri 1 azaltılır ve newIndex'e aktarılır
+        setIndex((prevValue) => { 
+            let newIndex = prevValue - 1;
             if (newIndex < 0) { // index sıfırken geri gidilmek istendiğinde index negatif olamayacağı için dizinin son elemanına geçiliyor
                 newIndex = reviews.length - 1; 
             }
@@ -17,8 +17,8 @@ const Review = () => {
     };
 
     const nextPerson = () => {
-        setIndex((nextValue) => { //nextValue index degeri
-            let newIndex = nextValue + 1; // nextValues degeri 1 azaltılır ve newIndex'e aktarılır
+        setIndex((nextValue) => { 
+            let newIndex = nextValue + 1; 
             if (newIndex >= reviews.length) { //newIndex 3 olduğunda veya 4 olduğunda , 4 diye bir indeks olmadığı için 0'a yönleniyor
                 newIndex = 0; 
             }
@@ -33,7 +33,7 @@ const Review = () => {
             randomIndex = index + 1;
           }
     
-        setIndex(randomIndex); // Yeni rastgele indeksi ayarla
+        setIndex(randomIndex); 
     };
 
     return (
